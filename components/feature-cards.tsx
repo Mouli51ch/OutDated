@@ -25,8 +25,8 @@ const features = [
     area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]",
   },
   {
-    title: "Preflight Verification",
-    description: "Verify computation without revealing sensitive data.",
+    title: "Prelisting Verification",
+    description: "Verify quality without revealing sensitive data.",
     icon: Lock,
     area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]",
   },
