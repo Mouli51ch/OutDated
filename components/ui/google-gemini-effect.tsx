@@ -24,18 +24,18 @@ export const GoogleGeminiEffect = ({
   taglineUrl?: string
 }) => {
   return (
-    <div className={cn("sticky top-80", className)}>
+    <div className={cn("sticky top-80 overflow-visible", className)}>
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
         {title || `Build with Aceternity UI`}
       </p>
       <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
         {description || ``}
       </p>
-      <div className="w-full h-[890px] -top-60 md:-top-40 flex items-center justify-center bg-transparent absolute">
+      <div className="w-full h-[500px] flex items-center justify-center bg-transparent absolute left-0 right-0 mx-auto z-10" style={{top: '60%', marginTop: '48px'}}>
         <motion.a 
           href={taglineUrl}
-          className="font-bold bg-black/40 backdrop-blur-md rounded-full md:px-6 md:py-3 px-4 py-2 md:mt-24 mt-8 z-30 md:text-base text-white text-xs w-fit mx-auto flex items-center gap-2 group relative overflow-hidden border border-white/10"
-          whileHover={{ scale: 1.05 }}
+          className="font-bold bg-black/60 backdrop-blur-lg rounded-full md:px-10 md:py-5 px-6 py-3 z-30 md:text-2xl text-lg text-white w-fit mx-auto flex items-center gap-3 group relative overflow-hidden border-2 border-cyan-300/30 shadow-2xl transition-all duration-300 hover:scale-105 hover:border-cyan-300/60 focus:outline-none focus:ring-4 focus:ring-cyan-400/30"
+          whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.98 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,22 +47,18 @@ export const GoogleGeminiEffect = ({
           }}
         >
           {/* Animated gradient background */}
-          <span className="absolute inset-0 bg-gradient-to-r from-[#00FFF5]/5 via-[#9945FF]/5 to-[#00FFF5]/5 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]"></span>
-          
+          <span className="absolute inset-0 bg-gradient-to-r from-[#00FFF5]/10 via-[#9945FF]/10 to-[#00FFF5]/10 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]"></span>
           {/* Animated border glow */}
-          <span className="absolute inset-0 -z-10 rounded-full blur-sm bg-gradient-to-r from-[#00FFF5] to-[#9945FF] opacity-0 group-hover:opacity-30 transition-opacity duration-500"></span>
-          
+          <span className="absolute inset-0 -z-10 rounded-full blur-md bg-gradient-to-r from-[#00FFF5] to-[#9945FF] opacity-0 group-hover:opacity-40 transition-opacity duration-500"></span>
           {/* Animated light reflection */}
           <span className="absolute inset-y-0 left-0 w-[40%] skew-x-[45deg] bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-150%] group-hover:translate-x-[200%] transition-all duration-700 ease-in-out"></span>
-          
           {/* Text with subtle glow */}
-          <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-white via-[#00FFF5] to-white bg-[length:200%_auto] animate-[shimmer_3s_ease-in-out_infinite]">{tagline}</span>
-          
+          <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-white via-[#00FFF5] to-white bg-[length:200%_auto] animate-[shimmer_3s_ease-in-out_infinite] drop-shadow-lg">{tagline}</span>
           {/* Animated arrow */}
           <motion.span 
-            className="relative z-10 text-[#00FFF5]"
+            className="relative z-10 text-[#00FFF5] text-2xl drop-shadow-lg"
             initial={{ x: 0 }}
-            animate={{ x: [0, 5, 0] }}
+            animate={{ x: [0, 8, 0] }}
             transition={{ 
               repeat: Number.POSITIVE_INFINITY, 
               repeatType: "reverse", 
@@ -76,10 +72,11 @@ export const GoogleGeminiEffect = ({
       </div>
       <svg
         width="1440"
-        height="890"
-        viewBox="0 0 1440 890"
+        height="500"
+        viewBox="0 0 1440 500"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute -top-60 md:-top-40 w-full"
+        className="absolute left-0 right-0 mx-auto w-full h-[500px] z-0 pointer-events-none"
+        style={{top: '60%', position: 'absolute', marginTop: '-200px', overflow: 'visible'}}
       >
         <defs>
           <filter id="blurMe">
