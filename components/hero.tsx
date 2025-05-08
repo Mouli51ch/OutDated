@@ -4,6 +4,7 @@ import { SparklesCore } from "@/components/ui/sparkles"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef, useEffect } from "react"
 import { GoogleGeminiEffect } from "@/components/ui/google-gemini-effect"
+import ComingSoonBadge from "@/components/ui/coming-soon-badge"
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null)
@@ -69,6 +70,9 @@ export default function Hero() {
 
       {/* Google Gemini Effect for the title */}
       <div className="relative z-30 w-full">
+        <div className="flex justify-center mb-8">
+          <ComingSoonBadge />
+        </div>
         <GoogleGeminiEffect
           pathLengths={[pathLengthFirst, pathLengthSecond, pathLengthThird, pathLengthFourth, pathLengthFifth]}
           title="OutDated"
