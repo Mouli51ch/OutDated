@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 186 100% 50%;  /* For your #00F6FF cyan */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 271 100% 50%;  /* For your #9D00FF purple */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 180 100% 50%;  /* For your #00FFFF accent */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 186 100% 50%;  /* Match your primary cyan */
+  --radius: 0.5rem;
+  --color-fg: 222.2 84% 4.9%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 186 100% 50%;  /* Keep your cyan in dark mode */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 271 100% 50%;  /* Keep your purple in dark mode */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 180 100% 50%;  /* Keep your accent in dark mode */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 186 100% 50%;  /* Match your primary cyan */
+  --color-fg: 210 40% 98%;
+}
+
+/* Define theme variables directly */
+:root {
+  --background: hsl(var(--color-bg));
+  --foreground: hsl(var(--color-fg));
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Refined primary color - more muted teal */
+    --primary: 190 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Refined secondary color - more muted purple */
+    --secondary: 260 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 63%;
+
+    /* Refined accent color - more muted teal */
+    --accent: 190 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Refined border color - more subtle */
+    --border: 260 40% 40%;
+    --input: 0 0% 10%;
+    --ring: 190 70% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border/20;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  /* More subtle gradient */
+  background: linear-gradient(135deg, rgba(64, 153, 180, 0.8), rgba(108, 73, 172, 0.8));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(64, 153, 180, 1), rgba(108, 73, 172, 1));
+}
+
+/* Refined glowing text effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(64, 153, 180, 0.4), 0 0 20px rgba(108, 73, 172, 0.2);
+}
+
+/* Refined animated gradient background */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(135deg, rgba(64, 153, 180, 0.08), rgba(108, 73, 172, 0.08));
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Sidebar animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sidebar-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.sidebar-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Professional card styling */
+.professional-card {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(64, 153, 180, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle hover effects */
+.subtle-hover {
+  transition: all 0.3s ease;
+}
+
+.subtle-hover:hover {
+  background: rgba(64, 153, 180, 0.05);
+  border-color: rgba(64, 153, 180, 0.3);
+}
+
+/* Refined gradient text */
+.refined-gradient-text {
+  background: linear-gradient(135deg, rgba(64, 153, 180, 1), rgba(108, 73, 172, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
