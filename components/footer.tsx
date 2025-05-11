@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
 import { Input } from "@/components/ui/input"
-import { Github, Twitter, MessageSquare, ChevronRight } from "lucide-react"
+import { Github, MessageSquare, ChevronRight } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Footer() {
@@ -132,17 +132,28 @@ export default function Footer() {
             </h3>
 
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="relative group" aria-label="GitHub">
+              <a href="https://github.com/Mouli51ch/OutDated" className="relative group" aria-label="GitHub">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00FFF5] to-[#9945FF] blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
                 <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-black/80 backdrop-blur-sm border border-white/10 group-hover:border-[#00FFF5]/50 transition-colors duration-300">
                   <Github className="w-5 h-5 text-white group-hover:text-[#00FFF5] transition-colors duration-300" />
                 </div>
               </a>
 
-              <a href="#" className="relative group" aria-label="Twitter">
+              <a href="https://x.com/OutDated_Labs" className="relative group" aria-label="X">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00FFF5] to-[#9945FF] blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
                 <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-black/80 backdrop-blur-sm border border-white/10 group-hover:border-[#00FFF5]/50 transition-colors duration-300">
-                  <Twitter className="w-5 h-5 text-white group-hover:text-[#00FFF5] transition-colors duration-300" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 462.799"
+                    className="w-5 h-5 text-white group-hover:text-[#00FFF5] transition-colors duration-300"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
+                    />
+                  </svg>
                 </div>
               </a>
 

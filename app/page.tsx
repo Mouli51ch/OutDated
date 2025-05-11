@@ -5,6 +5,8 @@ import InteractiveDemo from "@/components/interactive-demo"
 import Footer from "@/components/footer"
 import FloatingNavOutdated from "@/components/floating-navbar-outdated"
 import { ParallaxProvider } from "@/components/parallax-provider"
+import TrustVerification from "@/components/trust-verification"
+import WhitepaperSection from "@/components/whitepaper-section"
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <FloatingNavOutdated />
         <Hero />
         <Features />
+        <TrustVerification />
+        <WhitepaperSection />
         <CodeSnippet />
         <InteractiveDemo />
         <Footer />
