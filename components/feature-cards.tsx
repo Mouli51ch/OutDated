@@ -19,7 +19,7 @@ const features = [
     area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
   },
   {
-    title: "Lit Protocol Access Control",
+    title: "Custom Access Control Conditions",
     description: "Decentralized key gating via ACCs.",
     icon: Key,
     area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]",
@@ -31,8 +31,8 @@ const features = [
     area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]",
   },
   {
-    title: "Quantum-Resistant Encryption",
-    description: "Future-proof security for your most sensitive data.",
+    title: "Solana Access Ledger",
+    description: "Real-time, tamper-proof dataset access logs on Solana",
     icon: Sparkles,
     area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]",
   },
